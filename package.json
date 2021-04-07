@@ -1,0 +1,26 @@
+{
+  "name": "modern-javascript",
+  "version": "1.0.0",
+  "description": "My collections of JS Snippets and basics codes",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack serve --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imonweb/JS21.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imonweb/JS21/issues"
+  },
+  "homepage": "https://github.com/imonweb/JS21#readme",
+  "devDependencies": {
+    "css-loader": "^5.2.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.30.0",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
