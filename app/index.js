@@ -1,6 +1,6 @@
-import "../css/styles.css";
+import "./css/styles.css";
 /* import Dates from './Dates' */
- import '../js/playground.js';
+ import './js/playground.js';
 
 import 'materialize-css/dist/css/materialize.css';
 import 'materialize-css/dist/js/materialize.js'
