@@ -1,3 +1,4 @@
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
  
@@ -25,8 +26,9 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: ['style-loader','css-loader']
+        test: /\.css$/i,
+        // 'style-loader has been deleted and replaced:
+        use: [MiniCssExtractPlugin.loader,'css-loader'],
       },
       {
         test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
@@ -50,7 +52,7 @@ module.exports = {
       }, 
     ]
   },
-  plugins: [new HtmlWebpackPlugin({
+  plugins: [new MiniCssExtractPlugin(), new HtmlWebpackPlugin({
     template: 'app/index.html'
   })],
   
