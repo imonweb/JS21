@@ -2,7 +2,7 @@
 @import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@5.2/distr/fira_code.css);
 
 body, p {
-  background-color: darkslategray;
+  /* background-color: darkslategray; */
   color: rgb(150, 147, 147);
   text-shadow: none;
   font-weight: 100;

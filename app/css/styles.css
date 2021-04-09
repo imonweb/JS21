@@ -2,8 +2,8 @@
 @import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@5.2/distr/fira_code.css);
 
 body, p {
-  background-color: darkslategray;
-  color: snow;
+  /* background-color: darkslategray; */
+   
   text-shadow: none;
   font-weight: 100;
   font-family: 'Roboto Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif;

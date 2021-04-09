@@ -17,20 +17,30 @@ library.add(fas, far, fab)
 dom.watch();
 
 dom.i2svg()
-
- 
-
 if(module.hot){
   module.hot.accept();
 }
-
  
- 
- const today = new Date();
+/* DOM Project */
 
-const h2 = document.createElement('h2');
-const el = h2.innerHTML = "welcome";
- const say = document.write('heeelloo');
+// Define UI Vars
+const form = document.querySelector('#task-form');
+const taskList = document.querySelector('.collection');
+const clearBtn = document.querySelector('.clear-tasks');
+const filter = document.querySelector('#filter');
+const taskInput = document.querySelector('#task');
 
-/*window.onload = addtext();*/
- 
+ // JS_OOP Concepts
+
+ /*  Contructors & the 'this' keyword */
+
+ // Person constructor
+ function Person(name){
+   this,name = name;
+   console.log(this)
+ }
+
+ const john = new Person('John');
+ const jane = new Person('Jane');
+
+ console.log(jane)
