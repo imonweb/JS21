@@ -30,22 +30,27 @@
 // console.log(lis);
 
 // document.querySelectorAll
-const items = document.querySelectorAll('ul.collection li.collection-item');
+// const items = document.querySelectorAll('ul.collection li.collection-item');
 
-items.forEach(function(item, index){
-    item.textContent = `${index}: Hello`;
-});
+// items.forEach(function(item, index){
+//     item.textContent = `${index}: Hello`;
+// });
 
-const liOdd = document.querySelectorAll('li:nth-child(odd)');
-const liEven = document.querySelectorAll('li:nth-child(even)');
+// const liOdd = document.querySelectorAll('li:nth-child(odd)');
+// const liEven = document.querySelectorAll('li:nth-child(even)');
 
-liOdd.forEach(function(li, index){
-  li.style.background = '#ccc';
-});
+// liOdd.forEach(function(li, index){
+//   li.style.background = '#ccc';
+// });
 
-for(let i = 0; i < liEven.length; i++){
-  liEven[i].style.background = '#f4f4f4';
-}
+// for(let i = 0; i < liEven.length; i++){
+//   liEven[i].style.background = '#f4f4f4';
+// }
 
 
-console.log(items);
+// console.log(items);
+
+// document.body.addEventListener('click',check);
+// function check(e){
+// 	console.log(e.target);
+// }

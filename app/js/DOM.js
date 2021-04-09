@@ -45,3 +45,23 @@ console.log(link)
 // Classes
 val = link.className;
 val = link.classList;
+
+/*  Event Delegation and Evnt Bubbling */
+
+// document.body.addEventListener('clic', deleteItem);
+
+document.body.addEventListener('click', deleteItem);
+
+function deleteItem(e){
+
+  // console.log(e.target);
+ 
+  // if(e.target.parentElement.className === 'delete-item secondary-content'){
+  //   console.log('delete item')
+
+  if(e.target.parentElement.classList.contains('delete-item')){
+    console.log('delete item');
+    e.target.parentElement.parentElement.remove();
+  }
+ 
+}

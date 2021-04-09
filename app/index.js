@@ -34,11 +34,3 @@ const el = h2.innerHTML = "welcome";
 
 /*window.onload = addtext();*/
  
-document.querySelector('.clear-tasks').addEventListener('click', onClick);
-
-function onClick(e){
-  let val;
-
-  val = e;
-  console.log(e);
-}
