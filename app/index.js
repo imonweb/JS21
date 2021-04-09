@@ -2,6 +2,8 @@ import "./css/styles.css";
 /* import Dates from './Dates' */
  import './js/playground.js';
 
+//  import './js/DOM';
+
 import 'materialize-css/dist/css/materialize.css';
 import 'materialize-css/dist/js/materialize.js'
 /* require("materialize-css"); */
@@ -22,7 +24,7 @@ if(module.hot){
   module.hot.accept();
 }
 
-console.log('hey');
+ 
  
  const today = new Date();
 
@@ -31,11 +33,12 @@ const el = h2.innerHTML = "welcome";
  const say = document.write('heeelloo');
 
 /*window.onload = addtext();*/
-/*
- console.log(el + 'today is' + today);
- function addText(){
-   const par = document.querySelector('ext');
-   par.innerHTML = 'Paragraph added';
-  }
- addText();
- */
+ 
+document.querySelector('.clear-tasks').addEventListener('click', onClick);
+
+function onClick(e){
+  let val;
+
+  val = e;
+  console.log(e);
+}

@@ -3,7 +3,7 @@
 
 body, p {
   background-color: darkslategray;
-  color: snow;
+  color: rgb(150, 147, 147);
   text-shadow: none;
   font-weight: 100;
   font-family: 'Roboto Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -27,3 +27,4 @@ h1 {
   text-shadow: none;
   font-family: 'Bubblegum Sans', cursive;
 }
+

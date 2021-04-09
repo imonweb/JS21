@@ -4,7 +4,7 @@ const path = require('path');
  
 
 module.exports = {
-  mode: 'development',
+  mode: 'devlopment',
   entry: './app/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -34,10 +34,11 @@ module.exports = {
         test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         use: 'url-loader?limit=10000',
       },
-      {
-        test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
-        use: 'file-loader',
+      { 
+        test: /\.(png|woff|woff2|eot|ttf|svg)(\?|$)/, 
+        use: 'url-loader?limit=100000' 
       },
+
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
         use: 'file-loader?name=images/[name].[ext]',
@@ -52,8 +53,13 @@ module.exports = {
       }, 
     ]
   },
-  plugins: [new MiniCssExtractPlugin(), new HtmlWebpackPlugin({
-    template: 'app/index.html'
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[id].css',
+    }), 
+    new HtmlWebpackPlugin({
+      template: 'app/index.html'
   })],
   
   
