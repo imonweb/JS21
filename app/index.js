@@ -20,27 +20,6 @@ dom.i2svg()
 if(module.hot){
   module.hot.accept();
 }
- 
-/* DOM Project */
 
-// Define UI Vars
-const form = document.querySelector('#task-form');
-const taskList = document.querySelector('.collection');
-const clearBtn = document.querySelector('.clear-tasks');
-const filter = document.querySelector('#filter');
-const taskInput = document.querySelector('#task');
+// Book List
 
- // JS_OOP Concepts
-
- /*  Contructors & the 'this' keyword */
-
- // Person constructor
- function Person(name){
-   this,name = name;
-   console.log(this)
- }
-
- const john = new Person('John');
- const jane = new Person('Jane');
-
- console.log(jane)

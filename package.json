@@ -8,10 +8,13 @@
   },
   "homepage": "https://github.com/imonweb/JS21#readme",
   "devDependencies": {
+    "@babel/core": "^7.13.15",
+    "@babel/preset-env": "^7.13.15",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-regular-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "babel-loader": "^8.2.2",
     "css-loader": "^5.2.0",
     "file-loader": "^6.2.0",
     "font-awesome-loader": "^1.0.2",
