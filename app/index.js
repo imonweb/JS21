@@ -21,113 +21,50 @@ if(module.hot){
   module.hot.accept();
 }
 
-/* Book List */
+/*  Higher Order Functions and Arrays */
 
-// Book Constructor
-function Book(title, author, isbn){
-  this.title = title;
-  this.author = author;
-  this.isbn = isbn;
+
+const companies = [
+  {name: "Company One", category: "Finance", start: 1981, end: 2003},
+  {name: "Company Two", category: "Retail", start: 1992, end: 2008},
+  {name: "Company Three", category: "Auto", start: 1999, end: 2007},
+  {name: "Company Four", category: "Retail", start: 1989, end: 2010},
+  {name: "Company Five", category: "Technology", start: 2009, end: 2014},
+  {name: "Company Six", category: "Finance", start: 1987, end: 2010},
+  {name: "Company Seven", category: "Auto", start: 1986, end: 1996},
+  {name: "Company Eight", category: "Technology", start: 2011, end: 2016},
+  {name: "Company Nine", category: "Retail", start: 1981, end: 1989}
+];
+
+const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
+
+// for(let i = 0; i < companies.length; i++){
+//   console.log(companies[1]);
+// }
+
+/*  forEach */
+// companies.forEach(function(company){
+//   console.log(company)
+// })
+
+/*  filter */
+/*
+const numbers = [1, 2, 3, 4, 5];
+
+const numbersDouble = numbers.map(multiply)
+
+function double(value, index, arr){
+  return value * 2;
 }
 
-// UI Constructor
-function UI(){}
-
-// Add Book to list
-UI.prototype.addBookToList = function(book){
-  const list = document.getElementById('book-list');
-  // create tr element
-  const row = document.createElement('tr');
-  // insert cols
-  row.innerHTML = `
-    <td>${book.title}</td>
-    <td>${book.author}</td>
-    <td>${book.isbn}</td>
-    <td><a href="#" class="delete">X<a/></td>
-  `;
-  list.appendChild(row);
-}
-  // Show Alert
-  UI.prototype.showAlert = function(message, className){
-    // Create div
-    const div = document.createElement('div');
-    // Add Classes
-    div.className = `alert ${className}`;
-    // Add text
-    div.appendChild(document.createTextNode(message));
-    // Get parent
-    const container = document.querySelector('.container');
-    // Get Form
-    const form = document.querySelector('#book-form');
-    // Insert Alert
-    container.insertBefore(div, form);
-    // Timeout after 3 secs
-    setTimeout(function(){
-      document.querySelector('.alert').remove();
-    }, 3000);
-  }
-
-  // console.log(row); // show tr
-
-// Delete Book
-UI.prototype.deleteBook = function(target){
-  if(target.className === 'delete'){
-    target.parentElement.parentElement.remove();
-  }
-}
-
-// Clear fields
-UI.prototype.clearFileds = function(){
-  document.getElementById('title').value = '';
-  document.getElementById('author').value = '';
-  document.getElementById('isbn').value = '';
+function multiply(value, index, arr){
+  return value * index;
 }
 
 
+console.log(numbersDouble)
 
-// Event Listeners for Add Book
-document.getElementById('book-form').addEventListener('submit', function(e){
+*/
 
-  // Get form values
-  console.log('test');
-  const title = document.getElementById('title').value,
-        author = document.getElementById('author').value,
-        isbn = document.getElementById('isbn').value
+// remove duplicate numbers using filter 
 
-  // Instantiate book
-  const book = new Book(title, author, isbn);
-
-  // Instatiate UI
-  const ui = new UI();
-
-  // Validate
-  if(title === '' || author === '' || isbn === ''){
-    ui.showAlert('Please fill in all fields.', 'error');
-  } else {
-     // Add book to List
-     ui.addBookToList(book);
-
-     // Show success
-     ui.showAlert('Book Added!', 'success');
-
-     // Clear fields
-     ui.clearFileds();
-
-  }
-
- 
-  e.preventDefault();
-});
-
-
-
-// Event Listener for delete
-document.getElementById('book-list').addEventListener('click', function(e){
-  // Instatiate UI
-  const ui = new UI();
-  // Delete Book
-  ui.deleteBook(e.target);
-  // Show message
-  ui.showAlert('Book Removed!', 'success');
-  e.preventDefault();
-});
