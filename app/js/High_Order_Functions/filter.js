@@ -42,3 +42,23 @@ const canDrink = ages.filter(function(age){
 //const canDrink = ages.filter(age => age >= 21);
 
 console.log(canDrink)
+
+// Filter retail companies
+
+//const retailCompanies = companies.filter(function(company){
+//	if(company.category === 'Retail'){
+//		return true;
+//	}
+//}) 
+
+const retailCompanies = companies.filter(company => company.category === 'Retail');
+
+// Get 80s companies
+
+const eithiesCompaniees = companies.filter(company => (company.start >= 1980 && company.start < 1990) )
+
+//  companies get lasted 10 years or more
+
+const lastedTenYears = companies.filter(company => (company.end - company.start >= 10))
+
+console.log(lastedTenYears)

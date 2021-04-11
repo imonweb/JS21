@@ -11,8 +11,33 @@ const companies = [
 ];
 
 const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
+ 
 
-//create array of company names
+// sort
+
+const sortedCompanies = companies.sort(function(c1, c2){
+  if(c1.start > c2.start){
+    return 1;
+  } else {
+    return -2
+  }
+})
+
+// short method
+//
+//const sortedCompanies = companies.sort((c1, c2) => (c1.start > c2.start ? 1 : -1))
+//
+//console.log(sortedCompanies)
+
+console.log(sortedCompanies)
+ 
+ 
+
+ // sort ages
+const sortAges = ages.sort((a,b) => a - b );
+console.log(sortAges)
+
+ //create array of company names
 //const companyNames = companies.map(function(company){
 //	return company.name;
 //})
@@ -21,13 +46,8 @@ const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 //	return `${company.name} [${company.start} - ${company.end}]`;
 //})
 
-const testMap = companies.map(company  => `${company.name} [${company.start} - ${company.end}]`)
+//const testMap = companies.map(company  => `${company.name} [${company.start} - ${company.end}]`)
 
+const agesSquare = ages.map(age => Math.sqrt(age));
 
-console.log(testMap)
- 
- 
-
- 
-
- 
+console.log(agesSquare)

@@ -12,16 +12,31 @@ const companies = [
 
 const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
 
-let canDrink = [];
-for(i = 0; i < ages.length; i++){
-	if(ages[i] >= 21){
-		canDrink.push(ages[i]);
-	}
-}
+// reduce
 
-console.log(canDrink)
+// add all ages together
+//let ageSum = 0;
+//for(let i = 0; i < ages.length; i++){
+//	ageSum += ages[i];
+//}
 
+const ageSum = ages.reduce(function(total, age){
+	return total + age;
+}, 0)
+
+// short method
+const ageSum = ages.reduce((total, age) => total + age, 0)
+
+console.log(ageSum);
+ 
+ 
+
+// get the total years for all companies
+const totalYears = companies.reduce(function(total, company){
+	return total + (company.end - company.start)
+},0)
+
+console.log(totalYears)
  
 
  
-
