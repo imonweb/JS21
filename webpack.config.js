@@ -4,7 +4,7 @@ const path = require('path');
  
 
 module.exports = {
-  mode: 'devlopment',
+  mode: 'development',
   entry: './app/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
