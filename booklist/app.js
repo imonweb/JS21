@@ -24,7 +24,7 @@ UI.prototype.addBookToList = function(book){
 
   list.appendChild(row);
 
-  console.log(row);
+  // console.log(row);
 
 }
 
