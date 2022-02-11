@@ -1,3 +1,10 @@
+const john = {
+  name: 'John',
+  age: 20
+}
+
+console.log(john);
+
 // document.getElementsByClassName
 
 // const items = document.getElementsByClassName('collection-item');
