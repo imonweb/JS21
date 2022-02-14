@@ -3,7 +3,7 @@ const http = new easyHTTP;
 // Get Posts
 // const posts = http.get('https://jsonplaceholder.typicode.com/posts');
 // http.get('https://jsonplaceholder.typicode.com/posts', 
-// function(error, posts) {
+// function(err, posts) {
 //   if(err){
 //     console.log(err);
 //   } else {
@@ -18,7 +18,7 @@ const http = new easyHTTP;
 // Get single post
 /*
 http.get('https://jsonplaceholder.typicode.com/posts/1', 
-function(error, post) {
+function(err, post) {
   if(err){
     console.log(err);
   } else {
@@ -35,10 +35,32 @@ const data = {
 };
 
 // Create Post
+/*
 http.post('https://jsonplaceholder.typicode.com/posts', data, function(err, post){
    if(err){
     console.log(err);
   } else {
     console.log(post);
   }
+});
+*/
+
+// Update Post
+http.put('https://jsonplaceholder.typicode.com/posts/5',data, function(err, post){
+   if(err){
+    console.log(err);
+  } else {
+    console.log(post);
+  }
+});
+
+// Delete Post
+http.delete('https://jsonplaceholder.typicode.com/posts/1', 
+function(err, response) {
+  if(err){
+    console.log(err);
+  } else {
+    console.log(response);
+  }
+  
 });
